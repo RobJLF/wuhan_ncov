@@ -1,0 +1,58 @@
+@import "./vant.less";
+body {
+  font-size: 30px;
+  color: #202020;
+  font-family: -apple-system, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #fff;/* 微信默认背景色是灰色的 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+.gray {
+  color: #b3b3b3;
+}
+// 省略号
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsis(@clamp) when(@clamp>1) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @clamp;
+  -webkit-box-orient: vertical;
+}
+
+// 清浮动
+.clear-fix:after {
+  content: '';
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+// 不可复制文字
+.no-select {
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.block {
+  margin: 20px 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px 0 #808080;
+  background-color: #fff;
+}
+
+#__vconsole {
+  font-size: 26px !important;
+}

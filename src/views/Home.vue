@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+.home {
+  img {
+    width: 600px;
+  }
+}
+</style>
