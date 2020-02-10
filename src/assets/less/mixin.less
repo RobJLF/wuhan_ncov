@@ -1,12 +1,22 @@
 @import "./vant.less";
-body {
-  font-size: 30px;
-  color: #202020;
-  font-family: -apple-system, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #fff;/* 微信默认背景色是灰色的 */
+html, body {
+  height: 100%;
+  position: relative;
+  font-family: -apple-system, Avenir, Helvetica, Arial, sans-serif, Microsoft YaHei;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  // scroll-behavior:smooth;
+  background-color: #fff;/* 微信默认背景色是灰色的 */
   color: #2c3e50;
+}
+body {
+  font-size: 30px;
+  background-color: transparent;
+}
+div, a, img {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .gray {
   color: #b3b3b3;

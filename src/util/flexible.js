@@ -17,8 +17,15 @@ document.addEventListener("DOMContentLoaded", flexible, false);
 window.addEventListener("resize", (() => {
   let timer;
   return function () {
-    console.log(timer)
     clearTimeout(timer)
     timer = setTimeout(flexible, 100);
   }
 })(), false);
+Number.prototype.addZero = function() {
+  let value = this.valueOf();
+  if(value>=10) {
+    return value.toString()
+  }else {
+    return `0${value}`
+  }
+}
