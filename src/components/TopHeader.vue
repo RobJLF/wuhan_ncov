@@ -1,6 +1,6 @@
 <template>
   <header class="bg">
-      <img src="/bg.jpg" alt />
+      <img src="/wuhan_ncov/bg.jpg" alt />
       <div class="mid">
         <div>新型冠状病毒肺炎</div>
         <div>疫情实时追踪</div>

@@ -63,7 +63,7 @@ export default {
       this.chart = Echarts.init(this.$refs.map);
       this.chart.showLoading();
       let mapJson;
-      axios.get("/json/china.json").then(data => {
+      axios.get("/wuhan_ncov/json/china.json").then(data => {
         mapJson = data;
         Echarts.registerMap("china", mapJson.data);
         this.chart.setOption(this.option);
