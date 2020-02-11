@@ -3,8 +3,9 @@
 </template>
 
 <script>
-import Echarts from "echarts";
+// import Echarts from "echarts";
 import axios from "axios";
+import china from '../assets/json/china.json'
 export default {
   name: "Map",
   props: {
@@ -60,15 +61,16 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.chart = Echarts.init(this.$refs.map);
+      this.chart = echarts.init(this.$refs.map);
       this.chart.showLoading();
-      let mapJson;
-      axios.get("/wuhan_ncov/json/china.json").then(data => {
-        mapJson = data;
-        Echarts.registerMap("china", mapJson.data);
-        this.chart.setOption(this.option);
-        this.chart.hideLoading();
-      });
+      // let mapJson;
+      // console.log(china)
+      // axios.get("/wuhan_ncov/json/china.json").then(data => {
+      // mapJson = china.data;
+      echarts.registerMap("china", china);
+      this.chart.setOption(this.option);
+      this.chart.hideLoading();
+      // });
       // window.addEventListener("resize", this.chart.resize, false);
       let _this = this;
       window.addEventListener(
